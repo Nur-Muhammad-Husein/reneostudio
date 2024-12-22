@@ -1,0 +1,273 @@
+@font-face {
+	font-family: "ITC Avant Garde";
+	src: url("fonts/ITCAvantGardeStd-Bk.woff2");
+	font-weight: normal;
+}
+@font-face {
+	font-family: "ITC Avant Garde";
+	src: url("fonts/ITCAvantGardeStd-Bold.woff2");
+	font-weight: bold;
+}
+
+html {
+	font-family: "ITC Avant Garde";
+}
+body, html {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+table {
+	table-layout: auto;
+	border-collapse: collapse;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+td, th {
+	border: 2.5pt solid black;
+	padding: 1em;
+}
+td {
+	padding: 0.5em;
+}
+table a:hover {
+	color: #095d40;
+}
+
+.navigation_bar {
+	display: flex;
+	justify-content: space-between;
+	background-color: #ffde59;
+	color: #fe5000;
+}
+.navigation_bar a {
+	color: #fe5000;
+	padding: 1em;
+}
+.navigation_bar a:hover {
+	color: #095d40;
+	padding: 1em;
+}
+.navigation_bar .side {
+	display: flex;
+}
+
+.title_bar {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+	background-color: #095d40;
+	color: #eef4f1; 
+	height: 10%;
+}
+.title_bar img {
+	max-width: 100%;
+	height: auto;
+}
+.title_bar .address {
+	display: flex;
+}
+.title_bar .address p {
+	margin: 0;
+	align-self: end;
+}
+
+.main_content {
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	padding-top: 0;
+	background-color: #eef4f1;
+	/*height: 100%;*/
+	flex-grow: 1;
+}
+.main_content p {
+	line-height: 1.5rem;
+	width: 50%;
+}
+.main_content h1 {
+	
+}
+.main_content .brochure_container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.main_content .brochure {
+	max-width: 16%;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+.main_content a {
+	color: #fe5000;
+}
+/*
+.main_content .brochure a {
+	color: #fe5000;
+}
+.main_content .brochure a:hover {
+	color: #095d40;
+}
+*/
+.main_content .brochure img {
+	/* aspect-ratio: 1.414 / 1; */
+	max-width: 100%;
+	height: auto;
+	box-shadow: 0 0 0.5em 0.3em grey;
+}
+.main_content .brochure img:hover {
+	box-shadow: none;
+}
+.main_content .brochure p {
+	line-height: 1.2em;
+	text-align: center;
+	font-weight: bold;
+	width: 100%;
+}
+.main_content .featured_card_head {
+	background-color: #095d40;
+	color: #eef4f1;
+}
+.main_content .featured_card_description {
+	border-bottom: 0;
+	padding-bottom: 0;
+	font-weight: bold;
+}
+.main_content .featured_card_footnote {
+	vertical-align: bottom;
+	border-right: 0;
+	border-top: 0;
+	font-weight: normal;
+}
+.main_content .featured_card_price {
+	border-top: 0;
+	border-left: 0;
+	vertical-align: bottom;
+	text-align: right;
+	font-size: 24pt;
+	padding-bottom: 0;
+	padding-right: 0.2em;
+	font-weight: bold;
+}
+.main_content .featured_card_price td {
+	font-size: 20pt;
+}
+.main_content .the_additional {
+	width: 30%;
+}
+.main_content .the_additional td {
+	border-bottom: 0;
+	border-top: 1;
+	padding-bottom: 0.3em;
+	font-weight: bold;
+}
+.main_content .the_additional td:first-child {
+	border-right: 0;
+}
+.main_content .the_additional td:last-child {
+	border-left: 0;
+	text-align: right;
+}
+.main_content .the_additional tr:last-child td {
+	border-bottom: 2.5pt solid black;
+}
+
+.footer {
+	background-color: black;
+	border-top: 0.1em solid;
+	border-color: #eef4f1;
+	color: #eef4f1;
+	padding: 1em;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.footer .item_container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.footer .item {
+	max-width: 5%;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	align-self: center;
+}
+.footer .item p {
+	max-width: 50%;
+}
+.footer a {
+	color: #eef4f1;
+}
+.footer .item img {
+	aspect-ratio: 1 / 1;
+	max-width: 3em;
+	height: auto;
+}
+
+form {
+  display: table;
+  max-width: 25%;
+}
+
+form {
+  display: table-row;
+}
+
+input, select {
+  display: table-cell;
+  margin-bottom: 0.5em;
+  width: 100%;
+  padding: 0.4em 0.2em;
+}
+
+input[type=radio], input[type=datetime-local] {
+	width: auto;
+}
+
+fieldset {
+	margin-bottom: 0.5em;
+}
+
+@media (max-width: 600px) {
+	.main_content {
+		flex-direction: column;
+		min-height: auto;
+	}
+	.main_content p {
+		width: 100%;
+	}
+	.main_content .brochure_container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.main_content .brochure_container table {
+		width: 100%;
+	}
+	.main_content .brochure {
+		max-width: 100%;
+	}
+	
+	table {
+		max-width: 100%;
+	}
+	
+	.main_content .the_additional {
+		width: 100%;
+	}
+	
+	.navigation_bar {
+		flex-direction: column;
+	}
+	
+	form {
+		max-width: 90%;
+	}
+}
